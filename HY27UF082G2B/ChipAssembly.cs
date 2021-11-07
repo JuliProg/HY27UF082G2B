@@ -2,7 +2,7 @@ using NAND_Prog;
 using System;
 using System.ComponentModel.Composition;
 
-namespace HY27US08281A
+namespace HY27UF082G2B
 {
     /*
      use the design :
@@ -38,14 +38,14 @@ namespace HY27US08281A
             //  VSP3(20pin) - NC
 
             myChip.devManuf = "Hynix";
-            myChip.name = "HY27US08281A";
-            myChip.chipID = "AD73";            // device ID - ADh 73h (HY27US08281A.pdf page 30)
+            myChip.name = "HY27UF082G2B";
+            myChip.chipID = "ADDA109544";            // device ID - ADh 73h (HY27UF082G2B.pdf page 30)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
-            myChip.bytesPP = 512;             // page size - 512 byte
-            myChip.spareBytesPP = 16;          // size Spare Area - 16 byte
-            myChip.pagesPB = 32;               // the number of pages per block - 32 
-            myChip.bloksPLUN = 1024;           // number of blocks in CE - 1024
+            myChip.bytesPP = 2048;             // page size - 512 byte
+            myChip.spareBytesPP = 64;          // size Spare Area - 16 byte
+            myChip.pagesPB = 64;               // the number of pages per block - 32 
+            myChip.bloksPLUN = 2048;           // number of blocks in CE - 1024
             myChip.LUNs = 1;                   // the amount of CE in the chip
             myChip.colAdrCycles = 1;           // cycles for column addressing
             myChip.rowAdrCycles = 2;           // cycles for row addressing 
@@ -83,7 +83,7 @@ namespace HY27US08281A
 
             myChip.registers.Add(                  // https://github.com/JuliProg/Wiki/wiki/ID-Register
                 "Id Register").
-                Size(2).
+                Size(5).
                 Operations("ReadId_90h");               
                 
 

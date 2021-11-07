@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HY27US08281A.Properties {
+namespace HY27UF082G2B.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
