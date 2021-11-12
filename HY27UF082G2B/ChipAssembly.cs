@@ -39,7 +39,7 @@ namespace HY27UF082G2B
 
             myChip.devManuf = "Hynix";
             myChip.name = "HY27UF082G2B";
-            myChip.chipID = "ADDA109544";            // device ID - ADh 73h (HY27UF082G2B.pdf page 30)
+            myChip.chipID = "ADDA109544";            // device ID - ADh DAh 10h 95h 44h
 
             myChip.width = Organization.x8;    // chip width - 8 bit
             myChip.bytesPP = 2048;             // page size - 2048 byte
@@ -61,7 +61,7 @@ namespace HY27UF082G2B
 
             myChip.Operations("Reset_FFh").
                    Operations("Erase_60h_D0h").
-                   Operations("Read_00h").
+                   Operations("Read_00h_30h").
                    Operations("PageProgram_80h_10h");
 
             #endregion
